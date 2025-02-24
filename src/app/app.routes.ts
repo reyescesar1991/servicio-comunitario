@@ -66,7 +66,50 @@ export const routes: Routes = [
             loadComponent: () => import('./components/main-component/components/mas/components/miembros/miembros.component').then(mod => mod.MiembrosComponent),
           },
         ]
-      }
+      },
+      {
+        path: 'perfil',
+        loadComponent: () => import('./components/main-component/components/perfil/perfil.component').then(mod => mod.PerfilComponent),
+        children: [
+          {
+            path: 'datos-personales',
+            loadComponent: () => import('./components/main-component/components/perfil/components/datos-personales/datos-personales.component').then(mod => mod.DatosPersonalesComponent),
+          },
+          {
+            path: 'mis-pedidos',
+            loadComponent: () => import('./components/main-component/components/perfil/components/mis-pedidos/mis-pedidos.component').then(mod => mod.MisPedidosComponent),
+          },
+          {
+            path: 'mis-direcciones',
+            loadComponent: () => import('./components/main-component/components/perfil/components/mis-direcciones/mis-direcciones.component').then(mod => mod.MisDireccionesComponent),
+          },
+          {
+            path: 'mi-billetera',
+            loadComponent: () => import('./components/main-component/components/perfil/components/mi-billetera/mi-billetera.component').then(mod => mod.MiBilleteraComponent),
+          },
+          {
+            path: 'mis-reservas',
+            loadComponent: () => import('./components/main-component/components/perfil/components/mis-reservas/mis-reservas.component').then(mod => mod.MisReservasComponent),
+          },
+          {
+            path: 'mis-suscripciones',
+            loadComponent: () => import('./components/main-component/components/perfil/components/mis-suscripciones/mis-suscripciones.component').then(mod => mod.MisSuscripcionesComponent),
+          },
+          {
+            path: 'mi-cuenta',
+            loadComponent: () => import('./components/main-component/components/perfil/components/mi-cuenta/mi-cuenta.component').then(mod => mod.MiCuentaComponent),
+          },
+          {
+            path: 'notificacion',
+            loadComponent: () => import('./components/main-component/components/perfil/components/notificacion/notificacion.component').then(mod => mod.NotificacionComponent),
+          },
+          {
+            path: 'comentarios-foros',
+            loadComponent: () => import('./components/main-component/components/perfil/components/comentarios-foros/comentarios-foros.component').then(mod => mod.ComentariosForosComponent),
+          },
+        ]
+      },
+      
     ]
   },
   {
