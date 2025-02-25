@@ -2,6 +2,21 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'login', //padre
+    loadComponent: () => import('./components/login/login.component').then(mod => mod.LoginComponent),
+    children: [
+
+
+      //hijo
+        {   
+            path: 'sub-login',
+            loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
+        }
+
+
+    ]
+  },
+  {
     path: 'zengaku', 
     loadComponent: () => import('./components/main-component/main-component.component').then(mod => mod.MainComponentComponent),
     children: [
@@ -107,20 +122,21 @@ export const routes: Routes = [
             path: 'comentarios-foros',
             loadComponent: () => import('./components/main-component/components/perfil/components/comentarios-foros/comentarios-foros.component').then(mod => mod.ComentariosForosComponent),
           },
+          {
+            path: 'calendario',
+            loadComponent: () => import('./components/main-component/components/perfil/components/calendario/calendario.component').then(mod => mod.CalendarioComponent),
+          }
         ]
       },
       
     ]
-  },
-  {
-    path: 'login', 
-    loadComponent: () => import('./components/login/login.component').then(mod => mod.LoginComponent),
-    children: [
-        {   
-            path: 'sub-login',
-            loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
-        }
-    ]
-  },
-  
+  }, 
+
+
+
+
+
+
+
+
 ];
