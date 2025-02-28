@@ -1,0 +1,25 @@
+<header class="navbar">
+    <div class="container navbar-container">
+        <div class="logo">
+            <img src="../../assets/icons/LogoZengaku.png" alt="ZENGAKU" class="logo-image" />
+        </div>
+        
+        <!-- Botón hamburguesa -->
+        <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Menú">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="nav-links" [class.active]="isMenuOpen">
+            <a href="#inicio" (click)="closeMenu()">Inicio</a>
+            <a href="#cursos" (click)="closeMenu()">Cursos</a>
+            <a href="#metodologia" (click)="closeMenu()">Metodología</a>
+            <a href="#profesores" (click)="closeMenu()">Profesores</a>
+            <a href="#contacto" (click)="closeMenu()">Contacto</a>
+        </nav>
+        
+        <div class="auth-buttons">
+            <button class="btn btn-outline">Iniciar Sesión</button>
+            <button class="btn btn-primary">Registrarse</button>
+        </div>
+    </div>
+</header>

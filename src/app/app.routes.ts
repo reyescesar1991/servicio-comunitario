@@ -17,6 +17,22 @@ export const routes: Routes = [
     ]
   },
   {
+    path :'home',
+    loadComponent: () => import('./components/home-page/home-page.component').then(mod => mod.HomePageComponent),
+    children:[
+      //hijo
+      {   
+        path: 'sub',
+        loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
+    }
+    ]
+  },
+  {
+    path :'a',
+    loadComponent: () => import('./components/mi-nuevo-componente/mi-nuevo-componente.component').then(mod => mod.MiNuevoComponenteComponent),
+    
+  },
+  {
     path: 'zengaku', 
     loadComponent: () => import('./components/main-component/main-component.component').then(mod => mod.MainComponentComponent),
     children: [
@@ -131,6 +147,7 @@ export const routes: Routes = [
       
     ]
   }, 
+ 
 
 
 
