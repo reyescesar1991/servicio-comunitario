@@ -1,0 +1,117 @@
+/* Modificaciones para unificar estilos */
+.courses {
+    padding: 4rem 1.5rem;
+    background-color: #ffffff;
+}
+/*f8f9fa*/
+.courses-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.courses-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #161718;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.courses-card {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courses-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.courses-card-title {
+    color: #161718;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.courses-card-text {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+    max-width: 280px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Elementos específicos de cursos */
+.course-duration {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.course-duration strong {
+    color: #161718;
+    font-weight: 600;
+    margin-left: 0.3rem;
+}
+
+.courses-card-link {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.courses-card-link:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .courses-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .courses-grid {
+        gap: 1.5rem;
+    }
+    
+    .courses-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses {
+        padding: 3rem 1rem;
+    }
+    
+    .courses-card-title {
+        font-size: 1.3rem;
+    }
+    
+    .courses-card-text {
+        font-size: 0.9rem;
+    }
+    
+    .courses-card-link {
+        padding: 0.7rem 1.5rem;
+    }
+}
