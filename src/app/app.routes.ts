@@ -2,21 +2,6 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'login', //padre
-    loadComponent: () => import('./components/login/login.component').then(mod => mod.LoginComponent),
-    children: [
-
-
-      //hijo
-        {   
-            path: 'sub-login',
-            loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
-        }
-
-
-    ]
-  },
-  {
     path :'home',
     loadComponent: () => import('./components/home-page/home-page.component').then(mod => mod.HomePageComponent),
     children:[
@@ -25,6 +10,17 @@ export const routes: Routes = [
         path: 'sub',
         loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
     }
+    ]
+  },
+  {
+    path: 'login', //padre
+    loadComponent: () => import('./components/login/login.component').then(mod => mod.LoginComponent),
+    children: [
+      //hijo
+        {   
+            path: 'sub-login',
+            loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
+        }
     ]
   },
   {
