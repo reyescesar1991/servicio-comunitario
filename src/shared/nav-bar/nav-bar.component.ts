@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,6 +10,12 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavBarComponent {
   isMenuOpen = false;
+
+  constructor(
+    private readonly router : Router, 
+  ){
+
+  }
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -33,5 +40,10 @@ export class NavBarComponent {
     if (window.innerWidth > 768) {
       this.isMenuOpen = false;
     }
+  }
+
+  protected goToLogin(){
+
+    this.router.navigate(['login']);
   }
 }
