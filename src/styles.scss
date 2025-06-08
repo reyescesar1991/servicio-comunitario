@@ -20,6 +20,12 @@
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    /* Definición de variables de colores */
+    --primary-green: #00953A; /* Rojo principal para botones y detalles */
+    --background: #fff; /* Fondo general de la página */
+    --input-bg: #f9f9f9; /* Fondo de los campos de entrada */
+    --border: #e5e5e5; /* Color de borde para los contenedores */
 }
 
 * {

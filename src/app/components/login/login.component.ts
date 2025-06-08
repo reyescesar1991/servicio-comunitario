@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router'; //Renderizar las rutas hijas
+import { Router, RouterOutlet } from '@angular/router'; //Renderizar las rutas hijas
 
 @Component({
   selector: 'app-login',
@@ -11,5 +11,12 @@ import { RouterOutlet } from '@angular/router'; //Renderizar las rutas hijas
 })
 export class LoginComponent {
 
-  
+  constructor(
+    private readonly router : Router
+  ){}
+
+
+  protected goToForgotPassword(){
+    this.router.navigate(["login/forgot-password"])
+  }
 }

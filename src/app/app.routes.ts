@@ -18,8 +18,8 @@ export const routes: Routes = [
     children: [
       //hijo
         {   
-            path: 'sub-login',
-            loadComponent: () => import('./components/sub-componente/sub-componente.component').then(mod => mod.SubComponenteComponent),
+            path: 'forgot-password',
+            loadComponent: () => import('./components/login/components/forgot-password/forgot-password.component').then(mod => mod.ForgotPasswordComponent),
         }
     ]
   },
