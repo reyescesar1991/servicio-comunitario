@@ -6,7 +6,7 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router'; //Renderizar
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RouterLink], //Cada vez que se necesite una dependencia la tienen que importar en el imports
+  imports: [RouterOutlet, CommonModule], //Cada vez que se necesite una dependencia la tienen que importar en el imports
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
