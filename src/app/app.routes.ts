@@ -18,7 +18,7 @@ export const routes: Routes = [
     children: [
       //hijo
         {   
-            path: 'forgot-password',
+            path: 'forgotPassword',
             loadComponent: () => import('./components/login/components/forgot-password/forgot-password.component').then(mod => mod.ForgotPasswordComponent),
         }
     ]

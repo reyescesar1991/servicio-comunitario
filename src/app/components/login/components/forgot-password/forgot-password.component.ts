@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.scss'
 })
 export class ForgotPasswordComponent {
 
+  ngOnInit(){
+
+    console.log("hola ngOnInit");
+    
+  }
 }

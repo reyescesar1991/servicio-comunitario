@@ -1,11 +1,12 @@
 
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router'; //Renderizar las rutas hijas
+import { Router, RouterLink, RouterOutlet } from '@angular/router'; //Renderizar las rutas hijas
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterOutlet], //Cada vez que se necesite una dependencia la tienen que importar en el imports
+  imports: [RouterOutlet, CommonModule, RouterLink], //Cada vez que se necesite una dependencia la tienen que importar en el imports
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -17,6 +18,8 @@ export class LoginComponent {
 
 
   protected goToForgotPassword(){
-    this.router.navigate(["login/forgot-password"])
+    console.log("hola");
+    
+    this.router.navigate(["login/forgotPassword"]);
   }
 }
