@@ -44,6 +44,6 @@ export class NavBarComponent {
 
   protected goToLogin(){
 
-    this.router.navigate(['login']);
+    this.router.navigate(['auth/login']);
   }
 }

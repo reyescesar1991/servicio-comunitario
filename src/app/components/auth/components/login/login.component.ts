@@ -1,25 +1,26 @@
-
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router'; //Renderizar las rutas hijas
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterOutlet, CommonModule], //Cada vez que se necesite una dependencia la tienen que importar en el imports
+  imports: [CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-
-  constructor(
+constructor(
     private readonly router : Router
-  ){}
-
+  ){
+  }
 
   protected goToForgotPassword(){
-    console.log("hola");
-    
-    this.router.navigate(["login/forgotPassword"]);
+    this.router.navigate(["auth/forgot-password"]);
+  }
+
+  protected goToRegister(){
+
+    this.router.navigate(["auth/register"]);
   }
 }

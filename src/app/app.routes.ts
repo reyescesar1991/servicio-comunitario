@@ -13,13 +13,21 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'login', //padre
-    loadComponent: () => import('./components/login/login.component').then(mod => mod.LoginComponent),
+    path: 'auth', //padre
+    loadComponent: () => import('./components/auth/auth.component').then(mod => mod.AuthComponent),
     children: [
       //hijo
         {   
-            path: 'forgotPassword',
-            loadComponent: () => import('./components/login/components/forgot-password/forgot-password.component').then(mod => mod.ForgotPasswordComponent),
+          path: 'login',
+          loadComponent: () => import('./components/auth/components/login/login.component').then(mod => mod.LoginComponent),
+        },
+        {   
+            path: 'forgot-password',
+            loadComponent: () => import('./components/auth/components/forgot-password/forgot-password.component').then(mod => mod.ForgotPasswordComponent),
+        },
+        {
+            path: 'register',
+            loadComponent: () => import('./components/auth/components/register/register.component').then(mod => mod.RegisterComponent),
         }
     ]
   },

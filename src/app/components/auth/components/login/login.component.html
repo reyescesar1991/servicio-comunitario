@@ -1,4 +1,4 @@
-<router-outlet></router-outlet>
+
 <div class ="center-body">
     <!-- Contenedor principal del formulario de inicio de sesión -->
     <div class="login-container">
@@ -23,8 +23,8 @@
             <input type="password" placeholder="Contraseña" required autocomplete="current-password">
 
             <!-- Enlace para recuperar la contraseña en caso de olvidarla -->
-            <div class="forgot-link" (click)="goToForgotPassword()">
-                <a class="switch-link">¿Olvidaste tu contraseña?</a>
+            <div class="forgot-link">
+                <a class="switch-link" (click)="goToForgotPassword()">¿Olvidaste tu contraseña?</a>
             </div>
 
             <!-- Botón para enviar el formulario e iniciar sesión -->
@@ -34,10 +34,11 @@
         <!-- Pie de página con opción para registrarse si el usuario no tiene cuenta -->
         <div class="footer">
             ¿No tienes cuenta?
-            <a class="switch-link" href="/Auth/Register/Register.html">Regístrate</a>
+            <a class="switch-link" (click)="goToRegister()">Regístrate</a>
         </div>
     </div>
 
 </div>
+
 
 
